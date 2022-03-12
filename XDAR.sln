@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XDAR", "XDAR.csproj", "{2AE94BD4-2DE3-4F6A-84B0-15E61F169DF8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2AE94BD4-2DE3-4F6A-84B0-15E61F169DF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AE94BD4-2DE3-4F6A-84B0-15E61F169DF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AE94BD4-2DE3-4F6A-84B0-15E61F169DF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AE94BD4-2DE3-4F6A-84B0-15E61F169DF8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {40A6DDDA-56B7-433E-8837-27C5A44D82E9}
+	EndGlobalSection
+EndGlobal
