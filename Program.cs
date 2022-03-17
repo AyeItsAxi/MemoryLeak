@@ -54,12 +54,15 @@ namespace XDAR
                 try
                 {
                     long fs = new FileInfo("MemoryLeakFixer.dll").Length;
+                    //checks if the file size is the exact length it should be.
+                    //if there is drive compression ur fucked tbh lmao
                     if (fs == 13824)
                     {
                         Inject();
                     }
                     else
                     {
+                        //this is executed if the dll is either too small, doesnt exist, or is too big.
                         WebClient wc = new();
                         wc.DownloadFileCompleted += new System.ComponentModel.AsyncCompletedEventHandler(DownloadDLLCompletedCallback);
                         Console.WriteLine("DLL is corrupted! Redownloading DLL...");
@@ -84,6 +87,7 @@ namespace XDAR
         {
             try
             {
+                //if im being honest i myself dont understand this
                 Console.WriteLine("Got process ID of " + _injectpoint);
                 IntPtr procHandle = OpenProcess(PROCESS_CREATE_THREAD | PROCESS_QUERY_INFORMATION | PROCESS_VM_OPERATION | PROCESS_VM_WRITE | PROCESS_VM_READ, false, _injectpoint.Id);
                 IntPtr loadLibraryAddr = GetProcAddress(GetModuleHandle("kernel32.dll"), "LoadLibraryA");
@@ -96,6 +100,7 @@ namespace XDAR
                 CreateRemoteThread(procHandle, IntPtr.Zero, 0, loadLibraryAddr, allocMemAddress, 0, IntPtr.Zero);
                 Console.WriteLine("created remote thread");
                 Console.WriteLine("DLL injected into Process " + _injectpoint + " (Fortnite)");
+                Console.WriteLine("Thanks for using XDAR! XDAR uses the \"MemoryleakFixer.dll\" file which was created by wiktorwiktor12#8615");
                 Console.ReadLine();
             }
             catch (Exception ex)
